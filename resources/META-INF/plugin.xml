@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>com.ghedeon.lavsan</id>
+    <name>Lavsan</name>
+    <version>0.1</version>
+    <vendor email="asfalit@gmail.com">Ghedeon</vendor>
+
+    <description><![CDATA[
+      Provides generation support of kotlinx synthetic imports
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!--uncomment to enable plugin in all products-->
+    <depends>com.intellij.modules.androidstudio</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action class="com.ghedeon.lavsan.SyntheticAction" id="Lavsan" text="Generate Synthetic"
+                description="Generates kotlinx synthetic imports">
+            <add-to-group group-id="GenerateGroup"/>
+        </action>
+    </actions>
+
+</idea-plugin>
